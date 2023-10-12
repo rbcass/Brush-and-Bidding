@@ -12,7 +12,7 @@ const Navbar = () => {
 
             <ul className='nav-links'>
                 <li className='logo'>
-                    <a href='/'>H</a>
+                    <a href='/'>B&B</a>
                 </li>
                 <li>
                     <a href='Auction'>Auction</a>
@@ -22,6 +22,9 @@ const Navbar = () => {
                 </li>
                 <li>
                     <a href='Collection'>Collection</a>
+                </li>
+                <li>
+                    <a href='Account'>Account</a>
                 </li>
 
 </ul>

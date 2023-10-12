@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import * as images from '../../images'; 
 
+import './Home.css';
+
 
 
 const Home = () => {
@@ -28,9 +30,11 @@ const Home = () => {
   return (
     <div>
       <div className="gallery">
-        <button onClick={prevImage}>Previous</button>
+        <div className='container'>
+        <button className="prev-button" onClick={prevImage}>Previous</button>
         <img src={images[imageKeys[currentImage]]} alt={`Image ${currentImage + 1}`} />
-        <button onClick={nextImage}>Next</button>
+        <button className="next-button" onClick={nextImage}>Next</button>
+        </div>
       </div>
     </div>
   );
