@@ -22,7 +22,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    // autoadvance the gallery every 5 seconds
+    // autoadvance the gallery
     const interval = setInterval(nextImage, 5000);
     return () => clearInterval(interval);
   }, [currentImage]);

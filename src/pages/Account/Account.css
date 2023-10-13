@@ -1,0 +1,30 @@
+
+.account-page{
+
+
+   /* background-color: bisque; */
+    justify-content: center;
+    margin: 0;
+    
+
+    
+}
+
+.containerAcc{
+
+    width: 300px; 
+  margin: 0 auto;
+  margin-top: 25vh;
+  
+}
+
+.form{
+    font-size: 30px;
+    display: inline-block;
+}
+
+.inputt{
+    width: 30vh;
+    height: 5vh;
+    
+}
