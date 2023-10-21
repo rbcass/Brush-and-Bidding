@@ -28,7 +28,29 @@ const Account = () => {
     e.preventDefault()
 
     console.log(formData)
+
+    fetch('http://127.0.0.1:5000/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json', 
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); 
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+    
   }
+
+
+  ////
+
+
+  
   
   return (
     
@@ -39,8 +61,8 @@ const Account = () => {
                 <label>Username: </label>
                 <input type='text' name='username' onChange={handleChange} className='inputt' placeholder='Username'></input>
                 <label>Password: </label>
-                <input type='text' name='password' onChange={handleChange} className='inputt' placeholder='Password'></input>
-                <button className='butt'>Submit</button>
+                <input type='password' name='password' onChange={handleChange} className='inputt' placeholder='Password'></input>
+                <button className='butt' >Submit</button>
             </form>
         </div>
         
