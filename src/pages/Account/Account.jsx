@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import './Account.css'
+import {useNavigate} from 'react-router-dom'
 
 
 
 const Account = () => {
 
-
+const navigate = useNavigate();
   //initialise, variables
   const [formData, setformData] = useState({
     "username": "",
@@ -43,6 +44,9 @@ const Account = () => {
       .catch((error) => {
         console.error('Error:', error);
       });
+
+      const {username} = formData;
+      navigate(`/profile/${formData.username}`)
     
   }
 
